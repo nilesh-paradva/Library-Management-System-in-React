@@ -21,6 +21,13 @@ export const SingleBookAction = (data) => {
     }
 }
 
+export const EditBookAction = (data) => {
+    return {
+        type : "EDIT_BOOK",
+        payload: data,
+    }
+}
+
 export const DeleteBookAction = (data) => {
     return {
         type : "DELETE_BOOK",
@@ -58,6 +65,17 @@ export const SingleBookThunk = (id) => {
             dispatch(SingleBookAction(res.data));
         }).catch((err) => {
             console.log(err);
+        })
+    }
+}   
+
+export const EditBookThunk = (id, data) => {
+    return (dispatch) => {
+        Api.put(`/books/${id}`, data).then((res) => {
+            // console.log("edit-data",res.data);
+            dispatch(EditBookAction(res.data));
+        }).catch((err) => {
+            // console.log(err);
         })
     }
 }

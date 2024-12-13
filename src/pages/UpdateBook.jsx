@@ -2,13 +2,15 @@ import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router";
-import { GetBookThunk, SingleBookThunk } from "../services/action/BookAction";
+import { EditBookThunk, GetBookThunk, SingleBookThunk } from "../services/action/BookAction";
 
 const UpdateBook = () => {
     const { books, isSuccess } = useSelector((state) => state.BookReducer);
+    console.log("isSuccess data", isSuccess);
+    
 
     const dispatch = useDispatch();
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const { id } = useParams();
 
     const [bookForm, setBookForm] = useState({
@@ -28,10 +30,28 @@ const UpdateBook = () => {
         book_image: ""
     })
 
-    const handleFormSubmit = (e) => {
-        // e.preventDefault();
-        // dispatch(AddBookThunk(bookForm));
-    }
+    // const handleFormSubmit = (e) => {
+    //     e.preventDefault();
+    //     dispatch(EditBookThunk(id, bookForm));
+    // }
+
+    const handleFormSubmit = (e) => dispatch(EditBookThunk(id, bookForm));
+
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setBookForm((prev) => ({
+                ...prev,
+                book_image: reader.result,
+            }));
+        };
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    };
+
 
     useEffect(() => {
         if (id) {
@@ -42,6 +62,12 @@ const UpdateBook = () => {
     useEffect(() => {
         if (books) setBookForm(books)
     }, [books]);
+
+    useEffect(() => {
+        if (isSuccess) {
+            dispatch(navigate("/viewbook"));
+        }
+    }, [isSuccess]);
 
     return (
         <>
@@ -147,7 +173,7 @@ const UpdateBook = () => {
 
                                         <div>
                                             <label htmlFor="book-format" className="block text-sm font-medium text-white">Book Format*</label>
-                                            <input type="file" id="book-location" name="book_image" className="mt-1 p-2 w-full border-2 border-gray-300 rounded-md shadow-sm focus:ring-[#797c7f] focus:border-[#797c7f] bg-[#797c7f] outline-none text-white" />
+                                            <input type="file" id="book-location" name="book_image" onChange={handleImageChange} className="mt-1 p-2 w-full border-2 border-gray-300 rounded-md shadow-sm focus:ring-[#797c7f] focus:border-[#797c7f] bg-[#797c7f] outline-none text-white" />
                                         </div>
 
                                         {/* <!-- Submit Button --> */}

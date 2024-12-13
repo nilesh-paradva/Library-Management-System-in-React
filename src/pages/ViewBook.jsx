@@ -7,13 +7,17 @@ import { Link } from "react-router";
 const ViewBook = () => {
 
     const { books } = useSelector((state) => state.BookReducer);
+    console.log("edit data", books);
+    
     const dispatch = useDispatch();
+
+    
 
     useEffect(() => {
         if (books) {
             dispatch(GetBookThunk());
         }
-    }, [books]);
+    }, [books, dispatch]);
 
     return (
         <>

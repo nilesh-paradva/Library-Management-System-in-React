@@ -55,7 +55,7 @@ const LibreryForm = () => {
         if (isSuccess) {
             navigate("/viewbook");
         }
-    }, []);
+    }, [isSuccess]);
 
     return (
         <>
