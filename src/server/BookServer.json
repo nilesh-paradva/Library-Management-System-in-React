@@ -1,5 +1,38 @@
 {
   "books": [
-    
+    {
+      "id": "a72d",
+      "book_title": "",
+      "book_author": "",
+      "book_genre": "",
+      "book_year": "",
+      "book_price": "",
+      "book_publisher": "",
+      "book_id": "",
+      "book_edition": "",
+      "book_language": "",
+      "book_pages": "",
+      "book_availability": "",
+      "book_location": "",
+      "book_format": "",
+      "book_image": ""
+    },
+    {
+      "id": "59e8",
+      "book_title": "",
+      "book_author": "",
+      "book_genre": "",
+      "book_year": "",
+      "book_price": "",
+      "book_publisher": "",
+      "book_id": "",
+      "book_edition": "",
+      "book_language": "",
+      "book_pages": "",
+      "book_availability": "",
+      "book_location": "",
+      "book_format": "",
+      "book_image": ""
+    }
   ]
 }
