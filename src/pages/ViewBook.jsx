@@ -7,17 +7,11 @@ import { Link } from "react-router";
 const ViewBook = () => {
 
     const { books } = useSelector((state) => state.BookReducer);
-    console.log("edit data", books);
-    
     const dispatch = useDispatch();
 
-    
-
     useEffect(() => {
-        if (books) {
-            dispatch(GetBookThunk());
-        }
-    }, [books, dispatch]);
+        books && dispatch(GetBookThunk());
+    }, []);
 
     return (
         <>
@@ -32,7 +26,7 @@ const ViewBook = () => {
                             return (
                                 <Col xxl={4} className="tetxt-center" key={item.id}>
                                     <div className="book-container">
-                                        <div class="book">
+                                        <div className="book">
                                             <div className="img-dis relative flex flex-col justify-between h-full p-6">
                                                 <div className="dis relative flex items-center justify-center flex-col z-50">
                                                     <h1 className="h1 text-center w-[25rem] m-0">{item.book_title}</h1>
@@ -53,7 +47,7 @@ const ViewBook = () => {
                                                         </div>
                                                     </div>
                                                     <div className="button-Action flex items-center justify-center flex-col flex-lg-row gap-3">
-                                                        <Link className="px-3 py-2 rounded-lg bg-green-500 text-white">View</Link>
+                                                        <Link className="px-3 py-2 rounded-lg bg-green-500 text-white" to={`/singlebook/${item.id}`}>View</Link>
                                                         <Link className="px-3 py-2 rounded-lg bg-yellow-600 text-white" to={`/updatebook/${item.id}`}>Edit</Link>
                                                         <Link className="px-3 py-2 rounded-lg bg-red-800 text-white" onClick={() => dispatch(DeleteBookThunk(item.id))}>Delete</Link>
                                                     </div>

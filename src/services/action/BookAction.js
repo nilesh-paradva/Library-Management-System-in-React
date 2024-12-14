@@ -39,10 +39,8 @@ export const DeleteBookAction = (data) => {
 export const GetBookThunk = () => {
     return(dispatch) => {
         Api.get('/books').then((res) => {
-            // console.log("books data", res.data);
             dispatch(GetBookAction(res.data)); 
         }).catch((err) => {
-            // console.log(err);
         })
     }
 }
@@ -50,10 +48,8 @@ export const GetBookThunk = () => {
 export const AddBookThunk = (data) => {
     return (dispatch) => {
         Api.post("/books", data).then((res) => {
-            // console.log(res.data);
             dispatch(AddBookAction(data));
         }).catch((err) => {
-            // console.log(err);
         })
     }
 }
@@ -61,7 +57,6 @@ export const AddBookThunk = (data) => {
 export const SingleBookThunk = (id) => {
     return (dispatch) => {
         Api.get(`/books/${id}`).then((res) => {
-            // console.log(" single book",res.data);
             dispatch(SingleBookAction(res.data));
         }).catch((err) => {
             console.log(err);
@@ -72,10 +67,9 @@ export const SingleBookThunk = (id) => {
 export const EditBookThunk = (id, data) => {
     return (dispatch) => {
         Api.put(`/books/${id}`, data).then((res) => {
-            // console.log("edit-data",res.data);
+            console.log("edit-data",res.data);
             dispatch(EditBookAction(res.data));
         }).catch((err) => {
-            // console.log(err);
         })
     }
 }
@@ -83,10 +77,8 @@ export const EditBookThunk = (id, data) => {
 export const DeleteBookThunk = (id) => {
     return (dispatch) => {
         Api.delete(`/books/${id}`).then((res) => {
-            // console.log(res.data);
             dispatch(GetBookThunk());
         }).catch((err) => {
-            // console.log(err);
         })
     }
 }

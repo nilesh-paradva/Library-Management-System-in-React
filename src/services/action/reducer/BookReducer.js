@@ -15,10 +15,10 @@ const BookReducer = (state = initialState, action) => {
             return { ...state, books: action.payload, isSuccess: false }
 
         case "SINGLE_BOOK":
-            return { ...state, books: action.payload, isSuccess: false }
+            return { ...state, book: action.payload, isSuccess: false }
 
         case "EDIT_BOOK":
-            return { ...state, books: action.payload, isSuccess: true }
+            return { ...state, book: action.payload, isSuccess: true }
 
         default:
             return state
