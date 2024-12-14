@@ -2,8 +2,6 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SingleBookThunk } from "../services/action/BookAction";
 import { Link, useParams } from "react-router";
-import { use } from "react";
-import { Col, Container, Row } from "react-bootstrap";
 
 const SingleBook = () => {
 
