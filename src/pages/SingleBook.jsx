@@ -19,9 +19,6 @@ const SingleBook = () => {
         return <div>Loading...</div>;
     }
 
-
-    //     book_availability: "",
-
     return (
         <>
             {/* <h1>{book.book_title}</h1> */}
@@ -36,7 +33,7 @@ const SingleBook = () => {
                         <div className="singlebook">
                             <div className="img-dis relative flex flex-col justify-between h-full p-6">
                                 <div className="book-id">
-                                    <p>Book ID : {book.id}</p>
+                                    <p>Book ID : {book.book_id}</p>
                                 </div>
                                 <div className="dis relative flex items-center justify-center flex-col z-50">
                                     <h1 className="h1 text-center w-[25rem] m-0">{book.book_title}</h1>
@@ -44,21 +41,21 @@ const SingleBook = () => {
                                 </div>
                                 <div className="Book-image flex items-center justify-center w-[100%] flex-col">
                                     <img src={book.book_image} alt="" className="profile img-fluid rounded-lg border-0" />
-                                    <p className="font-bold mt-2">Price : 500 ₹</p>
+                                    <p className="font-bold mt-2">Price : {book.book_price} ₹</p>
                                 </div>
                                 <div className="Action-button relative flex items-center justify-around flex-col gap-3 z-50">
                                     <div className="dis relative flex items-center justify-between z-50 w-[100%]">
                                         <div className="genre text-center">
                                             <p>Book&nbsp;Edition</p>
-                                            <p className="font-bold text-lg text-[#d0d5de]">{book.book_genre}</p>
+                                            <p className="font-bold text-lg text-[#d0d5de]">{book.book_edition}</p>
                                         </div>
                                         <div className="publisher text-center">
                                             <p>Book&nbsp;Availability</p>
-                                            <p className="font-bold text-lg text-[#d0d5de]">{book.book_year}</p>
+                                            <p className="font-bold text-lg text-[#d0d5de]">{book.book_availability}</p>
                                         </div>
                                         <div className="pages text-center">
                                             <p>Book&nbsp;Format</p>
-                                            <p className="font-bold text-lg text-[#d0d5de]">20</p>
+                                            <p className="font-bold text-lg text-[#d0d5de]">{book.book_format}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -66,11 +63,11 @@ const SingleBook = () => {
                                     <div className="dis relative flex items-center justify-between z-50 w-[100%]">
                                         <div className="genre text-center">
                                             <p>book&nbsp;language:</p>
-                                            <p className="font-bold text-lg text-[#d0d5de]">book_language</p>
+                                            <p className="font-bold text-lg text-[#d0d5de]">{book.book_language}</p>
                                         </div>
                                         <div className="pages text-center">
                                             <p>Book&nbsp;Publisher:</p>
-                                            <p className="font-bold text-lg text-[#d0d5de]">book_publisher</p>
+                                            <p className="font-bold text-lg text-[#d0d5de]">{book.book_publisher}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -78,7 +75,7 @@ const SingleBook = () => {
                                     <div className="dis relative flex items-center justify-center z-50 w-[100%]">
                                         <div className="genre text-center">
                                             <p>Location:</p>
-                                            <p className="font-bold text-lg text-[#d0d5de]">book_location</p>
+                                            <p className="font-bold text-lg text-[#d0d5de]">{book.book_location}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -90,7 +87,7 @@ const SingleBook = () => {
                                         </div>
                                         <div className="pages text-center">
                                             <p>Book&nbsp;Pages</p>
-                                            <p className="font-bold text-lg text-[#d0d5de]">20</p>
+                                            <p className="font-bold text-lg text-[#d0d5de]">{book.book_pages}</p>
                                         </div>
                                         <div className="publisher text-center">
                                             <p>Publication&nbsp;Year</p>

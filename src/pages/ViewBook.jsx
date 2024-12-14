@@ -37,11 +37,11 @@ const ViewBook = () => {
                                                 </div>
                                                 <div className="Action-button relative flex items-center justify-around flex-col gap-3 z-50">
                                                     <div className="dis relative flex items-center justify-between z-50 w-[100%]">
-                                                        <div className="genre">
+                                                        <div className="genre text-center">
                                                             <p>Genres</p>
                                                             <p className="font-bold text-lg text-[#d0d5de]">{item.book_genre}</p>
                                                         </div>
-                                                        <div className="publisher">
+                                                        <div className="publisher text-center">
                                                             <p>Publication&nbsp;Year</p>
                                                             <p className="font-bold text-lg text-[#d0d5de]">{item.book_year}</p>
                                                         </div>
