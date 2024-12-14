@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import {  Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router";
 import { EditBookThunk, GetBookThunk, SingleBookThunk } from "../services/action/BookAction";
+import Button from '@mui/material/Button';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 
 const UpdateBook = () => {
     const { book, isSuccess } = useSelector((state) => state.BookReducer);
-    
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { id } = useParams();
@@ -84,7 +86,7 @@ const UpdateBook = () => {
                                         {/* <!-- Book Title --> */}
                                         <div>
                                             <label htmlFor="book-title" className="block text-sm font-medium text-white">Book Title*</label>
-                                            <input type="text" id="book-id" name="book_id" value={bookForm.id} hidden/>
+                                            <input type="text" id="book-id" name="book_id" value={bookForm.id} hidden />
                                             <input type="text" id="book-title" name="book_title" placeholder="Enter Book Title" value={bookForm.book_title} className="mt-1 p-2 w-full border-2 border-gray-300 rounded-md shadow-sm focus:ring-[#797c7f] focus:border-[#797c7f] bg-[#797c7f] outline-none placeholder:text-white text-white" onChange={handleChange} />
                                         </div>
 
@@ -170,10 +172,7 @@ const UpdateBook = () => {
                                             </select>
                                         </div>
 
-                                        <div>
-                                            <label htmlFor="book-format" className="block text-sm font-medium text-white">Book Format*</label>
-                                            <input type="file" id="book-location" name="book_image" onChange={handleImageChange} className="mt-1 p-2 w-full border-2 border-gray-300 rounded-md shadow-sm focus:ring-[#797c7f] focus:border-[#797c7f] bg-[#797c7f] outline-none text-white" />
-                                        </div>
+                                        <Button component="label" className="!bg-[#797c7f]" role={undefined} variant="contained" tabIndex={-1} startIcon={<CloudUploadIcon />}>Upload Book Image<input type="file" onChange={handleImageChange} multiple /></Button>
 
                                         {/* <!-- Submit Button --> */}
                                         <div className="flex justify-center mt-6">

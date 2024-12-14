@@ -3,6 +3,8 @@ import { Container, Col, Row } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router"
 import { AddBookThunk } from "../../services/action/BookAction";
+import Button from '@mui/material/Button';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 
 const LibreryForm = () => {
 
@@ -159,10 +161,7 @@ const LibreryForm = () => {
                                             </select>
                                         </div>
 
-                                        <div>
-                                            <label htmlFor="book-format" className="block text-sm font-medium text-white">Book Format*</label>
-                                            <input type="file" id="book-location" name="book_image" onChange={handleImageChange} className="mt-1 p-2 w-full border-2 border-gray-300 rounded-md shadow-sm focus:ring-[#797c7f] focus:border-[#797c7f] bg-[#797c7f] outline-none text-white" />
-                                        </div>
+                                        <Button component="label" className="!bg-[#797c7f]" role={undefined} variant="contained" tabIndex={-1} startIcon={<CloudUploadIcon />}>Upload Book Image<input type="file" onChange={handleImageChange}multiple/></Button>
 
                                         {/* <!-- Submit Button --> */}
                                         <div className="flex justify-center mt-6">
