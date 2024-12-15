@@ -1,6 +1,6 @@
 <h1 align="center">Product Management Dashboard</h1>
 
-[![Watch the video](https://github.com/user-attachments/assets/2b61a0ec-607d-4fcb-acf6-e21aed128937)](https://github.com/user-attachments/assets/2b61a0ec-607d-4fcb-acf6-e21aed128937)
+[![Watch the video](https://github.com/user-attachments/assets/5e03b25c-f837-4266-8b30-6fef47ffa0df)](https://github.com/user-attachments/assets/5e03b25c-f837-4266-8b30-6fef47ffa0df)
 
 <h3>Project Overview:-</h3>
 <p>Develop a frontend-only Product Management Dashboard using React, Redux, and Redux Thunk. The application allows users to manage product data with features like adding, editing, deleting, and viewing products. All data will be stored and retrieved from localStorage.</p>
