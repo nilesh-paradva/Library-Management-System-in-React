@@ -14,87 +14,36 @@
 <p>*&nbsp;&nbsp;Display a list of all books available in the library.</p>
 <p>*&nbsp;&nbsp;Each book entry shows the title, author, genre, and publication year.</p>
 
-<p>2&nbsp;&nbsp;Define State Structure:</p>
-<p>&nbsp;&nbsp;&nbsp;Plan the global state to include:</p>
-<ul>
-  <li>A list of products.</li>
-  <li>A loading indicator.</li>
-  <li>An error message (if applicable).</li>
-</ul>
-<p>3&nbsp;&nbsp;Define Actions:</p>
-<ul>
-  <li>Write reducers to handle updates to the product list based on the defined actions.</li>
-</ul>
+<h3>3&nbsp;&nbsp;Update Book:</h3>
+<p>*&nbsp;&nbsp;Users can edit the details of an existing book.</p>
+<p>*&nbsp;&nbsp;Changes are reflected both in the UI and the backend.</p>
 
+<h3>4&nbsp;&nbsp;Delete Book:</h3>
+<p>*&nbsp;&nbsp;Users can delete a book from the library.</p>
+<p>*&nbsp;&nbsp;The deleted book is removed from both the UI and the backend.</p>
 
-<h3>Task 3:  Implement Components</h3>
-<p>1&nbsp;&nbsp;Header Component:</p>
-<ul>
-  <li>&nbsp;&nbsp;Navigation links for accessing the product list and the add product page.</li>
-</ul>
-<p>2&nbsp;&nbsp;Product List Component:</p>
-<ul>
-  <li>Display a table or grid of products fetched from the Redux store.</li>
-  <li>Include buttons for editing and deleting products.</li>
-</ul>
-<p>3&nbsp;&nbsp;Add Product Component:</p>
-<p>&nbsp;&nbsp;&nbsp;A form to add new products with input fields for:</p>
-<ul>
-  <li>Name</li>
-  <li>Catagory</li>
-  <li>Price</li>
-  <li>Stock Quantity</li>
-  <li>Description</li>
-</ul>
-<p>4&nbsp;&nbsp;&nbsp;Edit Product Component:</p>
-<ul>
-  <li>A form pre-filled with the product's current data to allow editing.</li>
-</ul>
-<p>5&nbsp;&nbsp;&nbsp;Confirmation Modals (Optional):</p>
-<ul>
-  <li>Show a confirmation modal before deleting a product.</li>
-</ul>
+<h3>5&nbsp;&nbsp;State Management with Redux:</h3>
+<p>*&nbsp;&nbsp;Centralized state management for the entire application.</p>
+<p>*&nbsp;&nbsp;Actions and reducers to handle the state changes for book operations.</p>
 
-<h3>Task 4:  Routing Setup</h3>
-<p>1&nbsp;&nbsp;Use React Router to manage navigation:</p>
-<ul>
-  <li>/:Displays the product list.</li>
-  <li>/add: Displays the add product form</li>
-  <li>/edit/:id: Displays the edit product form for a specific product.</li>
-</ul>
+<h3>6&nbsp;&nbsp;HTTP Requests with Axios:</h3>
+<p>*&nbsp;&nbsp;Fetch books from the backend.</p>
+<p>*&nbsp;&nbsp;Send POST, PUT, and DELETE requests to the backend for creating, updating, and deleting books.</p>
 
-<h3>Task 5: CRUD Operations Using Redux Thunk</h3>
-<p>1&nbsp;&nbsp;Set custom loading:</p>
-<ul>
-  <li>Set the loader when viewing the records and submitting the form.</li>
-</ul>
-<p>2&nbsp;&nbsp;LocalStorage Integration:</p>
-<ul>
-  <li>Save product data to localStorage after every add, edit, or delete operation.</li>
-  <li>Load product data from localStorage on app initialization.</li>
-</ul>
+<h3>7&nbsp;&nbsp;HTTP Requests with Axios:</h3>
+<p>*&nbsp;&nbsp;Use JSON Server to simulate a RESTful API.</p>
+<p>*&nbsp;&nbsp;Store book data in a JSON file (db.json).</p>
 
-<h3>Task 6: Styling</h3>
-<p>1&nbsp;&nbsp;Set custom loading:</p>
-<ul>
-  <li>Create a simple, responsive UI using CSS frameworks like TailwindCSS, Bootstrap, or Material-UI.</li>
-  <li>Ensure consistent styling for forms, tables, and buttons.</li>
-</ul>
+<h3>8&nbsp;&nbsp;Responsive UI:</h3>
+<p>*&nbsp;&nbsp;Ensure the application is user-friendly and works well on different devices.</p>
 
-<h3>Task 7:  Testing</h3>
-<p>1&nbsp;&nbsp;Test all CRUD functionalities:</p>
-<ul>
-  <li>Add new products.</li>
-  <li>Edit existing products.</li>
-  <li>Delete products.</li>
-  <li>View the updated product list.</li>
-</ul>
-<p>2&nbsp;&nbsp;Ensure that data persists between page reloads using localStorage.</p>
-
-<h3>Deliverables</h3>
-<ul>
-  <li>A functional React application with a product dashboard.</li>
-  <li>CRUD operations handled via Redux and Redux Thunk.</li>
-  <li>Data persistence using localStorage.</li>
-  <li>Responsive and clean user interface.</li>
-</ul>
+<h3>Project Timeline:</h3>
+<p>1.&nbsp;&nbsp;Setup and initialize the project.</p>
+<p>2.&nbsp;&nbsp;Configure JSON Server with a db.json file.</p>
+<p>3.&nbsp;&nbsp;Set up Redux store, actions, and reducers.</p>
+<p>4.&nbsp;&nbsp;Create a basic UI and implement the Read operation to display books.</p>
+<p>5.&nbsp;&nbsp;Implement the Create operation with a form to add new books.</p>
+<p>6.&nbsp;&nbsp;Implement the Update operation with a form to edit existing books.</p>
+<p>7.&nbsp;&nbsp;Implement the Delete operation with a button to remove books.</p>
+<p>8.&nbsp;&nbsp;Add basic styling and ensure the application is responsive.</p>
+<p>9.&nbsp;&nbsp;Implement error handling and loading states for better UX.</p>
