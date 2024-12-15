@@ -3,25 +3,17 @@
 [![Watch the video](https://github.com/user-attachments/assets/5e03b25c-f837-4266-8b30-6fef47ffa0df)](https://github.com/user-attachments/assets/5e03b25c-f837-4266-8b30-6fef47ffa0df)
 
 <h3>Project Overview:-</h3>
-<p>Develop a frontend-only Product Management Dashboard using React, Redux, and Redux Thunk. The application allows users to manage product data with features like adding, editing, deleting, and viewing products. All data will be stored and retrieved from localStorage.</p>
+<p>Develop a Library Management System that allows users to perform CRUD (Create, Read, Update, Delete) operations on a collection of books. The application will be built using React for the front-end, Redux for state management, Axios for making HTTP requests, and JSON Server to simulate a RESTful backend API.</p>
 
+<h2>Features:</h2>
+<h3>1: Create Book:</h3>
+<p>*&nbsp;&nbsp;Users can add new books to the library.</p>
+<p>*&nbsp;&nbsp;Book details include title, author, genre, and publication year.</p>
 
-<h3>Task 1: Project Setup</h3>
-<p>1&nbsp;&nbsp;Initialize a React project using create-react-app.</p>
-<p>2&nbsp;&nbsp;Install necessary libraries:</p>
-<ul>
-  <li>redux</li>
-  <li>react-redux</li>
-  <li>react-thunk</li>
-  <li>react-router-dom</li> 
-</ul>
-<p>3&nbsp;&nbsp;Set up a clean folder structure with dedicated folders for components, Redux actions, reducers, and store configuration.</p>
+<h3>2: Read Books:</h3>
+<p>*&nbsp;&nbsp;Display a list of all books available in the library.</p>
+<p>*&nbsp;&nbsp;Each book entry shows the title, author, genre, and publication year.</p>
 
-<h3>Task 2: State Management</h3>
-<p>1&nbsp;&nbsp;Configure Redux Store:</p>
-<ul>
-  <li>&nbsp;&nbsp;Create a Redux store and integrate redux-thunk as middleware.</li>
-</ul>
 <p>2&nbsp;&nbsp;Define State Structure:</p>
 <p>&nbsp;&nbsp;&nbsp;Plan the global state to include:</p>
 <ul>
