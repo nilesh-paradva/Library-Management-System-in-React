@@ -1,4 +1,4 @@
-<h1 align="center">Product Management Dashboard</h1>
+<h1 align="center">Library Management System</h1>
 
 [![Watch the video](https://github.com/user-attachments/assets/5e03b25c-f837-4266-8b30-6fef47ffa0df)](https://github.com/user-attachments/assets/5e03b25c-f837-4266-8b30-6fef47ffa0df)
 
